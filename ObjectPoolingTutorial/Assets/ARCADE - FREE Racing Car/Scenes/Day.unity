@@ -1234,12 +1234,8 @@ MonoBehaviour:
   _maxSpawnRate: 5
   _randomSpawnRate: 0
   _spanwPoint: {fileID: 593868731}
-  _carPrefabs:
-  - {fileID: 2826824978497498959, guid: a9cbfe7195f75844aa7ec0619ca7616f, type: 3}
-  - {fileID: 8256269234112087060, guid: f430073c636116b4b9c0f5e6ddcde097, type: 3}
-  - {fileID: 1798404926777886660, guid: 98c57f100a7d7684dba02b8725bbc5d8, type: 3}
-  - {fileID: 5569977679159037677, guid: a82f70a5f0178974093910fc6fd84c38, type: 3}
-  - {fileID: 707622272864327977, guid: c4cad50aa03bbca42938fe318344950b, type: 3}
+  _carPrefab: {fileID: 707622272864327977, guid: c4cad50aa03bbca42938fe318344950b,
+    type: 3}
 --- !u!65 &1216690000
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1251,7 +1247,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 12.446, y: 8.3264, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1216690001
 Transform:
@@ -1262,12 +1258,43 @@ Transform:
   m_GameObject: {fileID: 1216689998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 38.6}
-  m_LocalScale: {x: 12.446, y: 8.3264, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 593868731}
   m_Father: {fileID: 0}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1264105196
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1264105197}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1264105197
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264105196}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -85.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1356579432}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1297331833
 PrefabInstance:
@@ -1379,6 +1406,72 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1299268364}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1356579429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1356579432}
+  - component: {fileID: 1356579431}
+  - component: {fileID: 1356579430}
+  m_Layer: 0
+  m_Name: CustomPoolSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1356579430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356579429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947631ced76a47fca4dc151a78209da4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _minSpawnRate: 1
+  _maxSpawnRate: 5
+  _randomSpawnRate: 0
+  _spanwPoint: {fileID: 1264105197}
+  _carPrefab: {fileID: 707622272864327977, guid: c4cad50aa03bbca42938fe318344950b,
+    type: 3}
+  _poolSize: 10
+--- !u!65 &1356579431
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356579429}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.446, y: 8.3264, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1356579432
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356579429}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -25.75, y: 0, z: 38.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1264105197}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1405223386
 GameObject:
   m_ObjectHideFlags: 0

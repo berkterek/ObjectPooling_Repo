@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 [AddComponentMenu("Terek Gaming/Controllers/Car Controller")]
@@ -22,7 +21,7 @@ public class CarController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out CarSpawner carSpawner))
+        if (other.TryGetComponent(out BaseCarSpawner carSpawner))
         {
             carSpawner.Despawn(this);
         }
